@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -26,6 +27,11 @@ class MainActivity : AppCompatActivity() {
         val answerButton = findViewById<Button>(R.id.answerButton)
         val secondValue = findViewById<EditText>(R.id.secondValue)
         val outputMessage = findViewById<TextView>(R.id.outputMessage)
+        val  addition = findViewById<RadioButton>(R.id.additionButton)
+        val  subtraction = findViewById<RadioButton>(R.id.subtractionButton)
+        val  multiplication = findViewById<RadioButton>(R.id.multiplicationButton)
+        val  division = findViewById<RadioButton>(R.id.divisionButton)
+        var answer = 0
 
 
 
@@ -71,11 +77,36 @@ class MainActivity : AppCompatActivity() {
                 var firstNumber = (firstValue.text.toString().toInt())
                 var secondNumber = (secondValue.text.toString().toInt())
 
+                if (addition.isChecked == false && subtraction.isChecked == false && multiplication.isChecked == false && division.isChecked == false) {
+                    outputMessage.text = ("Please select a mathematical operation.")
+                    return@setOnClickListener
+                }
+                else
+                    if (addition.isChecked) {
+                        answer = firstNumber + secondNumber
+                        outputMessage.text = ("You've chosen to add $firstNumber by $secondNumber")
+                    } else if (subtraction.isChecked) {
+                        answer = firstNumber - secondNumber
+                        outputMessage.text = ("You've chosen to subtract $firstNumber by $secondNumber")
+                    } else if (multiplication.isChecked) {
+                        answer = firstNumber * secondNumber
+                        outputMessage.text = ("You've chosen to multiply $firstNumber by $secondNumber")
+                    } else if (division.isChecked) {
+                        answer = firstNumber / secondNumber
+                        outputMessage.text = ("You've chosen to divide $firstNumber by $secondNumber")
+                    }
+                    outputMessage.text = ("The answer is $answer")
 
-                var total = firstNumber + secondNumber
 
-                var answer = total.toString()
-                outputMessage.text = ("Your answer is " + answer)
+
+
+
+
+
+
+
+
+
 
             }
         }

@@ -6,77 +6,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FDC0A4"
+    android:backgroundTint="#FDC0A4"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/titleBoxMathematics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-255dp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/titlemath" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/mathSquiggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/mathssquiggle" />
+        <ImageView
+            android:id="@+id/titleBoxMathematics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="250dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/titlemath" />
 
-    <EditText
-        android:id="@+id/firstValue"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="160dp"
-        android:ems="10"
-        android:hint="First Value"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/mathSquiggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/mathssquiggle" />
 
-    <EditText
-        android:id="@+id/secondValue"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginEnd="15dp"
-        android:ems="10"
-        android:hint="Second Value"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/firstValue"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="150dp"
+            android:ems="10"
+            android:hint="First Value"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/answerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="142dp"
-        android:layout_marginEnd="142dp"
-        android:layout_marginBottom="50dp"
-        android:text="Calculations"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/mathSquiggle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/secondValue"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="150dp"
+            android:ems="10"
+            android:hint="Second Value"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/outputMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/answerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="#03A9F4"
+            android:text="Calculate"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/outputMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="450dp"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioGroup
+            android:layout_width="415dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="125dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioButton
+                android:id="@+id/additionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FBBEA3"
+                android:backgroundTint="#D79B7E"
+                android:text="Add"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/subtractionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:backgroundTint="#D59A7D"
+                android:text="Subtract"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/multiplicationButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D59A7D"
+                android:backgroundTint="#D3997C"
+                android:text="Multiply"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/divisionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D59A7D"
+                android:backgroundTint="#D3997C"
+                android:text="Divide"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
